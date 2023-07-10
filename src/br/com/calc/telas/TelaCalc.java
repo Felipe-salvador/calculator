@@ -8,17 +8,10 @@ import java.text.ParseException;
 import java.util.Locale;
 import java.util.Objects;
 
-/**
- *
- * @author Felipe
- */
 public class TelaCalc extends javax.swing.JFrame {
 
     private EnumOperacao ultimaOperacao;
 
-    /**
-     * Creates new form TelaCalc
-     */
     public TelaCalc() {
         initComponents();
     }
@@ -76,7 +69,7 @@ public class TelaCalc extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+   
     private void initComponents() {
 
         btnAc = new javax.swing.JButton();
@@ -105,7 +98,7 @@ public class TelaCalc extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setIconImages(null);
 
-        btnAc.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        btnAc.setFont(new java.awt.Font("Segoe UI", 0, 8)); 
         btnAc.setText("AC");
         btnAc.setPreferredSize(new java.awt.Dimension(45, 40));
         btnAc.addActionListener(new java.awt.event.ActionListener() {
@@ -359,86 +352,85 @@ public class TelaCalc extends javax.swing.JFrame {
 
         setSize(new java.awt.Dimension(278, 402));
         setLocationRelativeTo(null);
-    }// </editor-fold>//GEN-END:initComponents
+    }
 
     private void btnAcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcActionPerformed
         limpa();
 
-    }//GEN-LAST:event_btnAcActionPerformed
+    }
 
     private void btnPorcentagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPorcentagemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnPorcentagemActionPerformed
+       
+    }
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
         digita("8");
-    }//GEN-LAST:event_btn8ActionPerformed
+    }
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
         digita("5");
-    }//GEN-LAST:event_btn5ActionPerformed
+    }
 
     private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
         digita("0");
-    }//GEN-LAST:event_btn0ActionPerformed
+    }
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        // TODO add your handling code here:
+        
         digita("1");
-    }//GEN-LAST:event_btn1ActionPerformed
+    }
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
 
         digita("7");
-    }//GEN-LAST:event_btn7ActionPerformed
+    }
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
 
         digita("9");
-    }//GEN-LAST:event_btn9ActionPerformed
+    }
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-        // TODO add your handling code here:
+       
         digita("4");
-    }//GEN-LAST:event_btn4ActionPerformed
+    }
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
 
         digita("6");
-    }//GEN-LAST:event_btn6ActionPerformed
+    }
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-        // TODO add your handling code here:
+        
         digita("2");
-    }//GEN-LAST:event_btn2ActionPerformed
+    }
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
 
         digita("3");
-    }//GEN-LAST:event_btn3ActionPerformed
-
+    }
     private void btnPontoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPontoActionPerformed
 
         digita(",");
-    }//GEN-LAST:event_btnPontoActionPerformed
+    }
 
     private void btnSumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumActionPerformed
         valor1 = stringToDouble(txtResult.getText());
         ultimaOperacao = EnumOperacao.SOMA;
         limpa();
-    }//GEN-LAST:event_btnSumActionPerformed
+    }
 
     private void btnDivisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisaoActionPerformed
         valor1 = stringToDouble(txtResult.getText());
         ultimaOperacao = EnumOperacao.DIVISAO;
         limpa();
-    }//GEN-LAST:event_btnDivisaoActionPerformed
+    }
 
     private void btnMultiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacaoActionPerformed
         valor1 = stringToDouble(txtResult.getText());
         ultimaOperacao = EnumOperacao.MULTIPLICACAO;
         limpa();
-    }//GEN-LAST:event_btnMultiplicacaoActionPerformed
+    }
 
     private void btnMenosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMenosActionPerformed
         if(txtResult.getText().equals(" ")){
@@ -448,19 +440,17 @@ public class TelaCalc extends javax.swing.JFrame {
             ultimaOperacao = EnumOperacao.SUBTRACAO;
             limpa();
         }
-    }//GEN-LAST:event_btnMenosActionPerformed
+    }
 
     private void btnCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCActionPerformed
         limpa();
-    }//GEN-LAST:event_btnCActionPerformed
+    }
 
     private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
         calcular();
-    }//GEN-LAST:event_btnIgualActionPerformed
+    }
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
